@@ -63,7 +63,7 @@ const Engineering = () => {
 
         {/* --- Programmes Section --- */}
         <section className="programmes-section" >
-          <a href="/contact_us">
+          <a href="./contact_us">
             <h2>Explore Our Programmes</h2>
             <div className="programme-cards">
 
