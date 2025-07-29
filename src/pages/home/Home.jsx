@@ -115,7 +115,7 @@ const Home = () => {
     <h2 className="iso-heading">Our Certifications</h2>
     <div className="iso-content">
       <img
-        src="/Image/ISO.webp" // Replace with your actual badge path
+        src="/Image/ISO.jpg" // Replace with your actual badge path
         alt="ISO Certified"
         className="iso-badge"
       />
