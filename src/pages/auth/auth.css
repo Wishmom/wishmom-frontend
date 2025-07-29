@@ -1,0 +1,200 @@
+/* .auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #ecdffc;
+
+    .auth-form {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+
+        h2 {
+            font-size: 24px;
+            color: #270c80;
+            margin-bottom: 15px;
+        }
+
+        form {
+            text-align: left;
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-size: 14px;
+                color: #333;
+            }
+
+            input {
+                width: 92%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+
+            }
+
+            
+        }
+
+    }
+} */
+
+/* auth.css */
+
+/* auth.css */
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Fills the entire viewport height */
+    /* Dynamic, animated background gradient */
+    background: linear-gradient(135deg, #e0c3fc 0%, #8a4baf 100%);
+    background-size: 400% 400%; /* Larger than viewport to allow animation */
+    animation: backgroundShift 15s ease infinite alternate; /* Smooth, slow animation */
+    font-family: 'Inter', sans-serif; /* A very popular and clean modern font */
+    color: #333; /* Default text color */
+    padding: 20px; /* Padding for mobile safety */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    overflow: hidden; /* Prevent scrollbars from background animation */
+}
+
+/* Background animation */
+@keyframes backgroundShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.auth-form {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly translucent white for depth */
+    padding: 50px; /* Generous padding for a spacious feel */
+    border-radius: 20px; /* Very rounded corners */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), /* Deeper, diffused shadow */
+                0 0 0 8px rgba(255, 255, 255, 0.4) inset; /* Soft inner white border/glow */
+    text-align: center;
+    width: 100%;
+    max-width: 450px; /* Wider form for better visual balance */
+    animation: fadeInSlideUp 0.8s ease-out forwards; /* Animated entry */
+    -webkit-backdrop-filter: blur(5px); /* Subtle frosted glass effect */
+    backdrop-filter: blur(5px); /* Subtle frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Very subtle outer border */
+    position: relative; /* For potential future enhancements like particles */
+}
+
+/* Entry animation for the form */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-form h2 {
+    font-size: 36px; /* Larger, more impactful heading */
+    color: #4a148c; /* Deep, rich purple */
+    margin-bottom: 35px; /* More space below heading */
+    font-weight: 800; /* Extra bold for prominence */
+    letter-spacing: -0.5px; /* Tighter letter spacing for elegance */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08); /* Soft text shadow */
+}
+
+.auth-form form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Ample space between input groups */
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 8px; /* Space between label and input */
+    font-size: 15px;
+    color: #555; /* Soft grey for labels */
+    font-weight: 600; /* Slightly bolder labels */
+}
+
+.auth-form input {
+    width: calc(100% - 24px); /* Adjust for padding */
+    padding: 14px 12px; /* More vertical padding for taller inputs */
+    border: 1px solid #ddd; /* Light, subtle border */
+    border-radius: 10px; /* Very rounded input fields */
+    background-color: #f9f9f9; /* Off-white input background */
+    color: #333;
+    font-size: 17px;
+    transition: all 0.3s ease; /* Smooth transitions for focus and hover */
+}
+
+.auth-form input::placeholder {
+    color: #999; /* Lighter placeholder text */
+}
+
+.auth-form input:focus {
+    border-color: #8a4baf; /* Your brand color on focus */
+    box-shadow: 0 0 0 4px rgba(138, 75, 175, 0.25); /* Soft focus glow */
+    background-color: #ffffff; /* Pure white on focus */
+    outline: none; /* Remove default browser outline */
+}
+
+.common-btn {
+    width: 100%;
+    padding: 18px; /* Generous padding for a large, inviting button */
+    background: linear-gradient(45deg, #8a4baf 0%, #af8bff 100%); /* Elegant gradient for the button */
+    color: white;
+    border: none;
+    border-radius: 12px; /* Very rounded button */
+    font-size: 20px; /* Larger font size for button text */
+    font-weight: 700; /* Bold button text */
+    cursor: pointer;
+    margin-top: 30px; /* Space above the button */
+    transition: all 0.3s ease; /* Smooth transitions for hover */
+    box-shadow: 0 8px 25px rgba(138, 75, 175, 0.5); /* Prominent shadow */
+    letter-spacing: 0.5px; /* Slight letter spacing */
+    text-transform: uppercase; /* Uppercase for a premium feel */
+}
+
+.common-btn:hover:not(:disabled) {
+    background: linear-gradient(45deg, #af8bff 0%, #8a4baf 100%); /* Invert gradient on hover */
+    transform: translateY(-5px) scale(1.01); /* Lift and subtly grow on hover */
+    box-shadow: 0 12px 35px rgba(138, 75, 175, 0.7); /* Enhanced shadow on hover */
+}
+
+.common-btn:disabled {
+    background: linear-gradient(45deg, #b08ed8 0%, #d5c0f2 100%); /* Lighter, muted gradient when disabled */
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    opacity: 0.8;
+}
+
+.auth-form p {
+    margin-top: 25px; /* Space above paragraphs */
+    font-size: 15px;
+    color: #666; /* Soft grey for secondary text */
+}
+
+.auth-form p a {
+    color: #8a4baf; /* Your brand color for links */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease; /* Smooth link color change */
+}
+
+.auth-form p a:hover {
+    color: #6a349c; /* Darker shade on link hover */
+    text-decoration: underline; /* Underline on hover for clarity */
+}

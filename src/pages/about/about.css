@@ -1,0 +1,115 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+.about {
+  flex: 1;
+  padding: 100px 20px;
+  background: linear-gradient(145deg, #670d2f, #3a0519);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+ -webkit-backdrop-filter: blur(12px);
+  
+  /* Standard syntax */
+  backdrop-filter: blur(12px);
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.about-content h2 {
+  font-size: 42px;
+  color: #ef88ad;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-content p {
+  font-size: 18px;
+  color: #ffffffcc;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Icon box styling */
+.about-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.icon-box {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 25px;
+  width: 220px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.icon-box:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-8px);
+}
+
+.icon-box i {
+  font-size: 36px;
+  color: #ef88ad;
+  margin-bottom: 12px;
+}
+
+.icon-box h3 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.icon-box p {
+  font-size: 15px;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 20px;
+  }
+
+  .about-content h2 {
+    font-size: 32px;
+  }
+
+  .about-content p {
+    font-size: 16px;
+  }
+
+  .icon-box {
+    width: 100%;
+  }
+}

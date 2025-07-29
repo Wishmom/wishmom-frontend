@@ -1,0 +1,341 @@
+:root {
+  --royal-purple: #3a0ca3;
+  --wine-red: #670d2f;
+  --rosewood: #a53860;
+  --soft-pink: #ef88ad;
+  --white: #ffffff;
+  --light-bg: #fce9f1;
+  --transition: all 0.3s ease;
+  --banner-image: url("/Image/bg1.webp"); /* Change as needed */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, var(--white), var(--light-bg));
+  color: #2c2c2c;
+}
+
+/* === TOP BANNER === */
+.top-banner {
+  padding: 100px 20px;
+  text-align: center;
+  background: var(--banner-image) center/cover no-repeat;
+  color: var(--white);
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.top-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15) 1px,
+    transparent 1px
+  );
+  background-size: 30px 30px;
+  animation: moveStars 60s linear infinite;
+  z-index: 0;
+}
+
+.top-banner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.top-banner h1 {
+  font-size: 64px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  animation: glow 3s ease-in-out infinite;
+  letter-spacing: 1px;
+}
+
+.top-banner p.typing-text {
+  font-size: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: none;
+  width: 100%;
+  margin: 0 auto 30px auto;
+  animation: typing 4s steps(40, end) forwards;
+}
+
+/* === CTA BUTTON === */
+.cta-btn {
+  padding: 14px 36px;
+  background-color: var(--rosewood);
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cta-btn:hover {
+  background-color: var(--soft-pink);
+  color: var(--wine-red);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* === INTRO SECTION === */
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 60px 10%;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+}
+
+.intro-left img {
+  width: 140px;
+  border-radius: 12px;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Slideshow Portrait (middle column) */
+.slideshow-portrait {
+  width: 360px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.portrait-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  border-radius: 12px;
+}
+
+.portrait-slide.active {
+  opacity: 1;
+}
+
+.intro-right {
+  max-width: 400px;
+}
+
+.intro-right h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: var(--royal-purple);
+}
+
+.intro-right p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* === WHAT WE OFFER === */
+.info-section {
+  padding: 80px 10%;
+  background-color: var(--soft-pink);
+  text-align: center;
+  color: var(--royal-purple);
+}
+
+.info-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.info-item {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  background-color: #fff;
+}
+
+/* === FEATURED INSTITUTES === */
+.featured-section {
+  padding: 80px 10%;
+  background-color: #fff0f6;
+}
+
+.featured-section h2 {
+  font-size: 30px;
+  color: var(--rosewood);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.institute-card {
+  display: flex;
+  border-left: 8px solid var(--rosewood);
+  border-radius: 14px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.institute-card:hover {
+  transform: translateY(-6px);
+}
+
+.institute-card img {
+  width: 320px;
+  object-fit: cover;
+  height: auto;
+}
+
+.card-content {
+  padding: 30px;
+  flex: 1;
+}
+
+.card-content h3 {
+  color: var(--wine-red);
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card-content p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* === ANIMATIONS === */
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 18px var(--soft-pink),
+      0 0 30px var(--rosewood);
+  }
+  50% {
+    text-shadow: 0 0 6px #fff, 0 0 14px var(--soft-pink),
+      0 0 22px var(--wine-red);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes moveStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .top-banner {
+    padding: 60px 20px;
+  }
+
+  .top-banner h1 {
+    font-size: 42px;
+  }
+
+  .top-banner p.typing-text {
+    font-size: 18px;
+    white-space: normal;
+  }
+
+  .cta-btn {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-left,
+  .slideshow-portrait,
+  .intro-right {
+    margin-bottom: 20px;
+  }
+
+  .slideshow-portrait {
+    margin: 0 auto;
+  }
+
+  .info-section h2,
+  .featured-section h2 {
+    font-size: 24px;
+  }
+
+  .institute-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .institute-card img {
+    width: 100%;
+  }
+
+  .intro-right h2 {
+    font-size: 26px;
+  }
+}

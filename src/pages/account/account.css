@@ -1,0 +1,80 @@
+.profile {
+  background: linear-gradient(to top left, #f3e8ff, #fff);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 35%;
+  margin: 160px auto;
+  font-family: 'Inter', sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.profile:hover {
+  transform: scale(1.02);
+}
+
+.profile h2 {
+  font-size: 32px;
+  color: #7e22ce;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  text-align: left;
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+.profile-info p {
+  margin-bottom: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.profile-info p strong {
+  color: #8a4baf;
+}
+
+.common-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background-color: #9333ea;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.common-btn:hover {
+  background-color: #7e22ce;
+  transform: scale(1.05);
+}
+
+.common-btn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .profile {
+    padding: 20px;
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .profile-info {
+    font-size: 16px;
+  }
+
+  .common-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
