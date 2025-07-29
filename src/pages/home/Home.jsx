@@ -108,11 +108,36 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* ISO Certification Section */}
+{/* ISO Certification Section */}
+<section className="iso-section">
+  <div className="iso-container">
+    <h2 className="iso-heading">Our Certifications</h2>
+    <div className="iso-content">
+      <img
+        src="/Image/ISO.webp" // Replace with your actual badge path
+        alt="ISO Certified"
+        className="iso-badge"
+      />
+      <div>
+      
+        <h3>ISO 9001:2015 Certified</h3>
+        <p>
+          Wishmom is proud to be ISO 9001:2015 certified, ensuring quality standards in information,
+          guidance, and student support services.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Testimonials (optional) */}
       {/* <Testimonials /> */}
     </div>
   );
 };
+
 
 export default Home;

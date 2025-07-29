@@ -6,7 +6,7 @@
   --white: #ffffff;
   --light-bg: #fce9f1;
   --transition: all 0.3s ease;
-  --banner-image: url("/Image/bg1.webp"); /* Change as needed */
+  --banner-image: url("/Image/bg1.webp");
 }
 
 * {
@@ -18,7 +18,7 @@
 body,
 html {
   font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to bottom, var(--white), var(--light-bg));
+  background-color: var(--light-bg);
   color: #2c2c2c;
 }
 
@@ -101,12 +101,12 @@ html {
   justify-content: space-between;
   gap: 2rem;
   padding: 60px 10%;
-  background-color: #ffffff;
+  background-color: transparent;
   flex-wrap: wrap;
 }
 
 .intro-left img {
-  width: 140px;
+  width: 240px;
   border-radius: 12px;
   animation: float 2s ease-in-out infinite;
 }
@@ -153,7 +153,7 @@ html {
 /* === WHAT WE OFFER === */
 .info-section {
   padding: 80px 10%;
-  background-color: var(--soft-pink);
+  background-color: transparent;
   text-align: center;
   color: var(--royal-purple);
 }
@@ -192,7 +192,7 @@ html {
 /* === FEATURED INSTITUTES === */
 .featured-section {
   padding: 80px 10%;
-  background-color: #fff0f6;
+  background-color: transparent;
 }
 
 .featured-section h2 {
@@ -211,7 +211,7 @@ html {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
   background-color: rgba(255, 255, 255, 0.9);
-  -webkit-backdrop-filter: blur(8px); /* For Safari */
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   transition: transform 0.3s ease;
 }
@@ -243,16 +243,62 @@ html {
   line-height: 1.6;
 }
 
+/* === ISO SECTION === */
+.iso-section {
+  padding: 4rem 2rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iso-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.iso-heading {
+  font-size: 32px;
+  color: var(--rosewood);
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.iso-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.iso-badge {
+  width: 100px;
+  height: auto;
+}
+
+.iso-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--royal-purple);
+}
+
+.iso-content p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+
 /* === ANIMATIONS === */
 @keyframes glow {
-  0%,
-  100% {
-    text-shadow: 0 0 10px #fff, 0 0 18px var(--soft-pink),
-      0 0 30px var(--rosewood);
+  0%, 100% {
+    text-shadow: 0 0 10px #fff, 0 0 18px var(--soft-pink), 0 0 30px var(--rosewood);
   }
   50% {
-    text-shadow: 0 0 6px #fff, 0 0 14px var(--soft-pink),
-      0 0 22px var(--wine-red);
+    text-shadow: 0 0 6px #fff, 0 0 14px var(--soft-pink), 0 0 22px var(--wine-red);
   }
 }
 

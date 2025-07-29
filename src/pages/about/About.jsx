@@ -7,10 +7,18 @@ const About = () => {
       <div className="about-content">
         <h2>About Us</h2>
         <p>
-          We guide students in finding the right path for their future by offering expert
-          assistance in admissions across Engineering, Law, Management, Agriculture,
-          and more. Our goal is to simplify your educational journey with proper
-          mentorship, updated information, and personalized support.
+
+
+<p>Alakbharati provide educational courses.. Like counseling, mentor, parenting. 
+Debdaan provide spiritual like Astrology, numorology etc.</p> 
+
+
+<p> May be some Institute name added in future..</p>
+
+<p> Pls ready the website and  Make sure the website is updated.</p>
+
+
+ Amrita Ghorui Chairman of WISH-MOM
         </p>
 
         <div className="about-icons">
