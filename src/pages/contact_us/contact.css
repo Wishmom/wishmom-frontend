@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #333;
   background-color: #f9fafb;
 }
@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #333;
   background-color: #f9fafb;
 }
@@ -38,8 +38,14 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .contact-header {
@@ -78,7 +84,7 @@ body {
 
 .form-heading::after,
 .contact-info-heading::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -117,7 +123,8 @@ body {
 .form-textarea:focus {
   outline: none;
   border-color: #6366f1;
-  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2),
+    inset 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .form-textarea {
@@ -136,7 +143,8 @@ body {
   cursor: pointer;
   box-shadow: 0 6px 15px rgba(79, 70, 229, 0.3);
   transform: scale(1);
-  transition: background-color 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, transform 300ms ease-in-out,
+    box-shadow 300ms ease-in-out;
   letter-spacing: 0.025em;
 }
 
@@ -284,5 +292,24 @@ body {
   .contact-info-container {
     border-left: 1px solid #e0e7ff;
     padding-left: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact-container {
+    padding: 2rem;
+    width: 112%;
+  }
+  .form-input,
+  .form-textarea {
+    width: 95%;
+  }
+
+  .submit-button {
+    width: 95%;
+  }
+
+  .contact-info-container {
+    padding: 1.2rem;
   }
 }
