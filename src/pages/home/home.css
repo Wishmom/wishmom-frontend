@@ -118,6 +118,8 @@ html {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
+  /* border: rgb(158, 248, 248) 10px solid; */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .portrait-slide {
