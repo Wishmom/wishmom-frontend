@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
 import "./header.css";
 
 const useMediaQuery = (query) => {
@@ -22,7 +21,7 @@ const useMediaQuery = (query) => {
 };
 
 
-const Header = ({ isAuth, user }) => {
+const Header = ({ isAuth}) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
@@ -31,7 +30,6 @@ const Header = ({ isAuth, user }) => {
  
   const dropdownRef = useRef(null);
 
-  const navigate = useNavigate()
 
   useEffect(() => {
 
@@ -131,9 +129,9 @@ const Header = ({ isAuth, user }) => {
         <div className="nav-separator"></div>
         
         {isAuth ? (
-          <Link to={"/account"} onClick={closeMenus} className="nav-button-auth">Account</Link>
+          <Link to={"/account"} onClick={() => setMenuOpen(false)} className="nav-button-auth">Account</Link>
         ) : (
-          <Link to={"/login"} onClick={closeMenus} className="nav-button-auth">Login</Link>
+          <Link to={"/login"} onClick={() => setMenuOpen(false)} className="nav-button-auth">Login</Link>
         )}
       </nav>
     </header>

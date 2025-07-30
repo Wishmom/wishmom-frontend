@@ -101,13 +101,13 @@ html {
   justify-content: space-between;
   gap: 2rem;
   padding: 60px 10%;
-  background-color: transparent;
+  background-color: #fff;
   flex-wrap: wrap;
 }
 
 .intro-left img {
   width: 240px;
-  border-radius: 12px;
+  border-radius: 127px;
   animation: float 2s ease-in-out infinite;
 }
 
@@ -153,7 +153,7 @@ html {
 /* === WHAT WE OFFER === */
 .info-section {
   padding: 80px 10%;
-  background-color: transparent;
+  background-color: #fff;
   text-align: center;
   color: var(--royal-purple);
 }
@@ -171,7 +171,7 @@ html {
 }
 
 .info-item {
-  background-color: rgba(244, 198, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 28px;
   border-radius: 12px;
   font-size: 16px;
@@ -190,105 +190,91 @@ html {
 }
 
 /* === FEATURED INSTITUTES === */
-.featured-section {
-  padding: 80px 10%;
-  background-color: transparent;
-}
-
-.featured-section h2 {
-  font-size: 30px;
-  color: var(--rosewood);
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.institute-card {
-  display: flex;
-  border-left: 8px solid var(--rosewood);
-  border-radius: 14px;
-  margin-bottom: 30px;
-  overflow: hidden;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.9);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  transition: transform 0.3s ease;
-}
-
-.institute-card:hover {
-  transform: translateY(-6px);
-}
-
-.institute-card img {
-  width: 320px;
-  object-fit: cover;
-  height: auto;
-}
-
-.card-content {
-  padding: 30px;
-  flex: 1;
-}
-
-.card-content h3 {
-  color: var(--wine-red);
-  margin-bottom: 12px;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.card-content p {
-  font-size: 17px;
-  line-height: 1.6;
-}
 
 /* === ISO SECTION === */
 .iso-section {
-  padding: 4rem 2rem;
   background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 60px 20px;
 }
 
 .iso-container {
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .iso-heading {
-  font-size: 32px;
-  color: var(--rosewood);
-  font-weight: 800;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--royal-purple);
+  margin-bottom: 40px;
 }
 
-.iso-content {
+/* ISO Box */
+.iso-box {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  justify-content: center;
-  text-align: left;
+  gap: 30px;
   flex-wrap: wrap;
+  margin-bottom: 60px;
 }
 
 .iso-badge {
-  width: 100px;
+  max-width: 150px;
   height: auto;
+  border-radius: 69px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.iso-content h3 {
-  margin: 0;
+.iso-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.iso-text h3 {
+  color: var(--wine-red);
   font-size: 1.5rem;
-  color: var(--royal-purple);
+  margin-bottom: 10px;
 }
 
-.iso-content p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #555;
+/* Certificate Box */
+.certificate-box {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.certificate-image {
+  max-width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
+}
+
+.certificate-details {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  border-left: 5px solid var(--royal-purple);
+  min-width: 250px;
+}
+
+.certificate-details h3 {
+  color: var(--royal-purple);
+  margin-bottom: 10px;
+}
+
+.certificate-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certificate-details li {
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 
 
@@ -333,7 +319,7 @@ html {
 }
 
 /* === RESPONSIVE DESIGN === */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .top-banner {
     padding: 60px 20px;
   }
@@ -354,7 +340,7 @@ html {
 
   .intro-section {
     flex-direction: column;
-    text-align: center;
+    gap: 7rem;
   }
 
   .intro-left,
@@ -383,5 +369,21 @@ html {
 
   .intro-right h2 {
     font-size: 26px;
+  }
+}
+
+@media (max-width: 420px){
+  .intro-right{
+    margin-right: 50px;
+  }
+
+  .portrait-slide{
+    width: 90%;
+  }
+}
+
+@media (max-width: 405px){
+  .slideshow-portrait{
+    width: 300px;
   }
 }

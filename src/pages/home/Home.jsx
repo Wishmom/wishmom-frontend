@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './home.css';
 import { FaInfoCircle, FaUserTie, FaChalkboard, FaUserFriends } from 'react-icons/fa';
 // import Testimonials from '../../components/testimonials/Testimonials';
+import Certi_ins from '../../components/Certification_Institutes/certi_ins';
 
 const bannerImages = [
   '/Image/location1.jpg',
@@ -83,8 +84,10 @@ const Home = () => {
         </div>
       </section>
 
+      <Certi_ins />
+
       {/* Featured Institutes */}
-      <section className="featured-section">
+      {/* <section className="featured-section">
         <h2>Featured Institutes</h2>
         <div className="institute-grid">
           <div className="institute-card">
@@ -107,20 +110,20 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
-      {/* ISO Certification Section */}
+      </section> */}
+      
 {/* ISO Certification Section */}
-<section className="iso-section">
+{/* <section className="iso-section">
   <div className="iso-container">
     <h2 className="iso-heading">Our Certifications</h2>
-    <div className="iso-content">
+
+    <div className="iso-box">
       <img
-        src="/Image/ISO.jpg" // Replace with your actual badge path
+        src="/Image/ISO."
         alt="ISO Certified"
         className="iso-badge"
       />
-      <div>
-      
+      <div className="iso-text">
         <h3>ISO 9001:2015 Certified</h3>
         <p>
           Wishmom is proud to be ISO 9001:2015 certified, ensuring quality standards in information,
@@ -128,8 +131,28 @@ const Home = () => {
         </p>
       </div>
     </div>
+
+    <div className="certificate-box">
+      <img
+        src="/Image/certificates.jpg"
+        alt="Wishmom Trust Certificate"
+        className="certificate-image"
+      />
+      <div className="certificate-details">
+        <h3>Registered Trust Details</h3>
+        <ul>
+          <li><strong>Trust Name:</strong> WISH MOM</li>
+          <li><strong>Registration Number:</strong> IV–190301714 / 2023</li>
+          <li><strong>Registration Year:</strong> 2023</li>
+          <li><strong>Location:</strong> Kolkata, West Bengal, India</li>
+          <li><strong>President:</strong> Amrita Ghorui</li>
+          <li><strong>Registered Under:</strong> The Indian Trusts Act, 1882</li>
+        </ul>
+      </div>
+    </div>
   </div>
-</section>
+</section> */}
+
 
 
 
