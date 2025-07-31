@@ -1,4 +1,3 @@
-
 /* ====== 1. ROOT VARIABLES & GLOBAL FONT ====== */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
 
@@ -9,7 +8,7 @@
   --color-accent-dark: #e67e22;  /* Darker accent for hover */
   --color-text: #34495e;         /* Muted dark blue for text */
   --color-text-light: #7f8c8d;   /* Grey for less important text */
-  --color-bg: #ffffff;           /* Clean white background */
+  --color-bg: rgba(246, 251, 0, 0.95);           /* Clean white background */
   --color-border: #ecf0f1;       /* Light grey for borders */
   --header-height: 75px;
   --border-radius: 6px;
@@ -41,6 +40,7 @@
   /* font-size: 1.7rem;
   font-weight: 700; */
   width: 70px;
+  border-radius: 44px;
   /* color: var(--color-primary); */
 }
 

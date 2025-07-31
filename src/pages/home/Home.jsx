@@ -27,7 +27,7 @@ const Home = () => {
       
       {/* Top Banner */}
       <section className="top-banner">
-        <h1 className="brand-name">Wishmom</h1>
+        <h1 className="brand-name">Wish-Mom</h1>
         <p className="typing-text">Your trusted guide for Vocational and Professional Courses</p>
       </section>
 
@@ -67,19 +67,39 @@ const Home = () => {
         <div className="info-grid">
           <div className="info-item">
             <FaInfoCircle className="info-icon" />
-            <span>Timely Admission Updates</span>
+            <span>All Regular Courses</span>
           </div>
           <div className="info-item">
             <FaChalkboard className="info-icon" />
-            <span>Vocational Course Listings</span>
+            <span>Career Councelling</span>
           </div>
           <div className="info-item">
             <FaUserTie className="info-icon" />
-            <span>Personalized Guidance</span>
+            <span>Parenting</span>
           </div>
           <div className="info-item">
             <FaUserFriends className="info-icon" />
-            <span>Community Support</span>
+            <span>No Consultancy Charge</span>
+          </div>
+             <div className="info-item">
+            <FaUserTie className="info-icon" />
+            <span>Guidence of all Boards Students</span>
+          </div>
+             <div className="info-item">
+            <FaUserTie className="info-icon" />
+            <span>Any course with an Affordable Fees</span>
+          </div>
+             <div className="info-item">
+            <FaUserTie className="info-icon" />
+            <span>Direct Admission in Genuine Colleges</span>
+          </div>
+             <div className="info-item">
+            <FaUserTie className="info-icon" />
+            <span>Assistance for Education Loan</span>
+          </div>
+             <div className="info-item">
+            <FaUserTie className="info-icon" />
+            <span>Govt. Scholarship Guidance</span>
           </div>
         </div>
       </section>

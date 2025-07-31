@@ -3,7 +3,7 @@
 .about {
   flex: 1;
   padding: 100px 20px;
-  background: linear-gradient(145deg, #670d2f, #3a0519);
+  background: linear-gradient(145deg, #a4ff98, #4de416);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -20,9 +20,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
- -webkit-backdrop-filter: blur(12px);
-  
-  /* Standard syntax */
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   text-align: center;
   animation: fadeInUp 1s ease-in-out;
@@ -30,19 +28,18 @@
 
 .about-content h2 {
   font-size: 42px;
-  color: #ef88ad;
+  color:rgb(4, 39, 4);;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
 .about-content p {
   font-size: 18px;
-  color: #ffffffcc;
+  color: rgb(4, 39, 4);;
   line-height: 1.8;
   margin-bottom: 20px;
 }
 
-/* Icon box styling */
 .about-icons {
   display: flex;
   justify-content: center;
@@ -67,23 +64,22 @@
 
 .icon-box i {
   font-size: 36px;
-  color: #ef88ad;
+  color: rgb(4, 39, 4);;
   margin-bottom: 12px;
 }
 
 .icon-box h3 {
   font-size: 20px;
-  color: #fff;
+  color: rgb(4, 39, 4);;
   margin-bottom: 10px;
 }
 
 .icon-box p {
   font-size: 15px;
-  color: #ddd;
+  color: rgb(4, 39, 4);;
   line-height: 1.5;
 }
 
-/* Animation */
 @keyframes fadeInUp {
   0% {
     transform: translateY(30px);
@@ -95,7 +91,6 @@
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .about-content {
     padding: 20px;
@@ -112,4 +107,43 @@
   .icon-box {
     width: 100%;
   }
+}
+.about-flex {
+  /* display: flex; */
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.chairman-photo {
+  flex: 1;
+  text-align: center;
+  min-width: 260px;
+}
+
+.chairman-photo img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.photo-caption {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.designation {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #023811;
 }

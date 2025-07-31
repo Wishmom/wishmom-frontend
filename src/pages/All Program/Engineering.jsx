@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./all_program.css"
 import { FaBullseye, FaInfoCircle, FaRocket, FaGraduationCap, FaLaptopCode, FaCogs } from 'react-icons/fa';
@@ -73,11 +72,11 @@ const Engineering = () => {
                   <h4>Diploma Courses</h4>
                 </div>
                 <ul>
-                  <li>Civil Engineering</li>
+                  <li>Computer Science & Technology</li>
+                  <li>Robotics & Automation</li>
                   <li>Mechanical Engineering</li>
                   <li>Electrical Engineering</li>
-                  <li>Electronics & Telecommunication</li>
-                  <li>Computer Science & Technology</li>
+                  <li>Civil Engineering</li>
                 </ul>
               </div>
 
@@ -88,11 +87,11 @@ const Engineering = () => {
                 </div>
                 <ul>
                   <li>Computer Science & Engineering</li>
-                  <li>Data Science & AI</li>
+                  
                   <li>Electrical Engineering</li>
                   <li>Mechanical Engineering</li>
                   <li>Civil Engineering</li>
-                  <li>Electronics & Communication</li>
+                  <li>Bio-Technology</li>
                 </ul>
               </div>
 
@@ -102,10 +101,12 @@ const Engineering = () => {
                   <h4>M-Tech Specializations</h4>
                 </div>
                 <ul>
-                  <li>Computer Science & Engineering</li>
-                  <li>Electrical Engineering (Power Systems)</li>
-                  <li>Mechanical Engineering (Thermal)</li>
-                  <li>Structural Engineering</li>
+                    <li>Computer Science & Engineering</li>
+                  
+                  <li>Electrical Engineering</li>
+                  <li>Mechanical Engineering</li>
+                  <li>Civil Engineering</li>
+                  <li>Bio-Technology</li>
                 </ul>
               </div>
             </div>

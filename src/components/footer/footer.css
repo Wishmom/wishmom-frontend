@@ -1,6 +1,6 @@
 footer {
-    background-color: #5f367e;
-    color: white;
+    background-color: rgb(4, 39, 4);
+    color:  rgba(246, 251, 0, 0.95);
     padding: 20px 0;
     text-align: center;
     bottom: 0;
@@ -23,7 +23,7 @@ footer {
             margin-top: 10px;
 
             a {
-                color: white;
+                color:  rgba(246, 251, 0, 0.95);
                 font-size: 25px;
                 margin: 0 10px;
                 text-decoration: none;

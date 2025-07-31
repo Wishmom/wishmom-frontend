@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./all_program.css"
 import { FaBullseye, FaInfoCircle, FaRocket, FaGraduationCap, FaLaptopCode, FaCogs } from 'react-icons/fa';
@@ -74,6 +73,7 @@ const Computational = () => {
               <ul>
                 <li>Advance Networking</li>
                 <li>Cyber security</li>
+                <li>Msc in Mathematics</li>
                 {/* <li></li>
                 <li>Electronics & Telecommunication</li>
                 <li>Computer Science & Technology</li> */}
@@ -100,7 +100,7 @@ const Computational = () => {
             <div className="programme-card">
               <div className="card-header">
                 <FaCogs className="card-icon" />
-                <h4>BCA  &  MCA</h4>
+                <h4>BCA(H) &  MCA</h4>
               </div>
               <ul>
                 <li>Mobile Aplication</li>

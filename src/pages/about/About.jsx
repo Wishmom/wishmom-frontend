@@ -1,25 +1,40 @@
 import React from "react";
 import "./about.css";
+import chairmanImg from "/Image/chairman.jpg"; // Adjust the path based on your project
 
 const About = () => {
   return (
     <div className="about">
       <div className="about-content">
         <h2>About Us</h2>
-        <p>
+        <div className="about-flex">
+          <div className="about-text">
+            <p>
+            Wish-Mom is a dedicated educational trust committed to empowering students through a wide range of academic, professional, and vocational courses. Our mission is to guide and support learners in achieving their career goals by providing access to quality education and expert mentorship.
 
+              <br />
+              <p></p>
+              We proudly assist students in pursuing prestigious programs such as MBBS, B.Pharma, M.Pharma, Law, Lab Technician, and many more. In addition, we offer a variety of vocational and professional training courses tailored to today’s competitive job market.
+              <br />
+              <br />
+             At Wish-Mom, we believe in nurturing talent and building confident, skilled individuals who are ready to succeed in their chosen fields.
+              <br />
+              
+              <br />
+              <br />
+              
+             
+            </p>
+          </div>
 
-<p>Alakbharati provide educational courses.. Like counseling, mentor, parenting. 
-Debdaan provide spiritual like Astrology, numorology etc.</p> 
-
-
-<p> May be some Institute name added in future..</p>
-
-<p> Pls ready the website and  Make sure the website is updated.</p>
-
-
- Amrita Ghorui Chairman of WISH-MOM
-        </p>
+          <div className="chairman-photo">
+            <img src={chairmanImg} alt="Chairman Amrita Ghorui" />
+            
+          </div>
+          
+           <span className="designation"> <strong>Amrita Ghorui</strong></span><br />
+           <span className="designation">Chairman of Wish-Mom</span>
+        </div>
 
         <div className="about-icons">
           <div className="icon-box">
@@ -40,7 +55,7 @@ Debdaan provide spiritual like Astrology, numorology etc.</p>
             <i className="fas fa-university"></i>
             <h3>Institution Info</h3>
             <p>
-              Up-to-date details about top colleges in Agriculture, Engineering, Law, and Management.
+              Up-to-date details about top colleges in Agriculture, Engineering, Law, and Management and so on...
             </p>
           </div>
         </div>

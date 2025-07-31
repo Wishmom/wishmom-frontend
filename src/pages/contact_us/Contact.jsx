@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./contact.css";
+import { UserData } from "../../context/UserContext";
 
 const App = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +16,18 @@ const App = () => {
   const [message, setMessage] = useState("");
   const [isError, setIsError] = useState(false);
 
+  const navigate = useNavigate();
+  const { isAuth } = UserData();
+  useEffect(() => {
+    if (isAuth) {
+      const savedData = localStorage.getItem('pendingContactForm');
+      if (savedData) {
+        setFormData(JSON.parse(savedData));
+        localStorage.removeItem('pendingContactForm');
+      }
+    }
+  }, [isAuth]); 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -24,6 +38,11 @@ const App = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!isAuth) {
+      localStorage.setItem('pendingContactForm', JSON.stringify(formData));
+      navigate('/login'); 
+      return;
+    }
     setLoading(true);
     setMessage("");
     setIsError(false);
@@ -31,27 +50,17 @@ const App = () => {
     try {
       const response = await fetch('http://localhost:5000/api/contact', {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         setMessage("Your message has been sent successfully!");
         setIsError(false);
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          subject: "",
-          message: "",
-        });
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
       } else {
         const errorData = await response.json();
-        setMessage(
-          `Failed to send message: ${errorData.message || "Server error"}`
-        );
+        setMessage(`Failed to send message: ${errorData.message || "Server error"}`);
         setIsError(true);
       }
     } catch (error) {
@@ -282,113 +291,3 @@ const App = () => {
 
 export default App;
 
-
-// import React, { useState } from 'react';
-// import "./contact.css"; // Make sure you have this CSS file
-
-// const App = () => {
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     email: '',
-//     phone: '',
-//     subject: '',
-//     message: '',
-//   });
-
-//   const [loading, setLoading] = useState(false);
-//   const [responseMsg, setResponseMsg] = useState('');
-//   const [isError, setIsError] = useState(false);
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData((prevData) => ({
-//       ...prevData,
-//       [name]: value,
-//     }));
-//   };
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     setLoading(true);
-//     setResponseMsg('');
-//     setIsError(false);
-
-//     try {
-//       // The backend server must be running on http://localhost:5000
-//       const response = await fetch('http://localhost:5000/api/contact', {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(formData),
-//       });
-
-//       const result = await response.json();
-
-//       if (response.ok) {
-//         setResponseMsg(result.message);
-//         setIsError(false);
-//         setFormData({ name: '', email: '', phone: '', subject: '', message: '' }); // Clear form
-//       } else {
-//         // Use the error message from the server
-//         setResponseMsg(result.message || 'Failed to send message.');
-//         setIsError(true);
-//       }
-//     } catch (error) {
-//       console.error('Submission error:', error);
-//       setResponseMsg('An error occurred. Is the server running?');
-//       setIsError(true);
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   return (
-//     // Your JSX for the form goes here. This is just the logic.
-//     // Make sure your form has an onSubmit={handleSubmit} and your
-//     // inputs have the correct name and value attributes.
-//     <div className="app-container">
-//       <section className="contact-section">
-//         <form className="space-y-6" onSubmit={handleSubmit}>
-//           {/* Name Input */}
-//           <div className="form-group">
-//             <label htmlFor="name" className="form-label">Your Name</label>
-//             <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="form-input" required />
-//           </div>
-//           {/* Email Input */}
-//           <div className="form-group">
-//             <label htmlFor="email" className="form-label">Your Email</label>
-//             <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="form-input" required />
-//           </div>
-//           {/* Phone Input */}
-//           <div className="form-group">
-//             <label htmlFor="phone" className="form-label">Your Phone Number</label>
-//             <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="form-input" />
-//           </div>
-//           {/* Subject Input */}
-//           <div className="form-group">
-//             <label htmlFor="subject" className="form-label">Subject</label>
-//             <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} className="form-input" required />
-//           </div>
-//           {/* Message Textarea */}
-//           <div className="form-group">
-//             <label htmlFor="message" className="form-label">Your Message</label>
-//             <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} className="form-textarea" required></textarea>
-//           </div>
-//           {/* Submit Button */}
-//           <button type="submit" className="submit-button" disabled={loading}>
-//             {loading ? 'Sending...' : 'Send Message'}
-//           </button>
-//           {/* Response Message */}
-//           {responseMsg && (
-//             <p className={`message-status ${isError ? 'error' : 'success'}`}>
-//               {responseMsg}
-//             </p>
-//           )}
-//         </form>
-//       </section>
-//     </div>
-//   );
-// };
-
-// export default App;

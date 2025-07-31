@@ -75,7 +75,7 @@ const Bio = () => {
               <ul>
                 <li>B-Tech in Bio-Technology</li>
                 <li>B.sc in Bio-Technology</li>
-                <li>B.sc in Microbiology</li>
+                {/* <li>B.sc in Microbiology</li> */}
               </ul>
             </div>
 
@@ -85,8 +85,8 @@ const Bio = () => {
                 <h4>Master Degree</h4>
               </div>
               <ul>
-                <li>B.sc in Bio-Technology</li>
-                <li>B.sc in Microbiology</li>
+                <li>M.sc in Bio-Technology</li>
+                <li>M.sc in Microbiology</li>
               </ul>
             </div>
 

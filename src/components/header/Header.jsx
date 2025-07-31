@@ -12,7 +12,6 @@ const useMediaQuery = (query) => {
       setMatches(media.matches);
     }
     const listener = () => setMatches(media.matches);
-    // Use the modern addEventListener syntax
     media.addEventListener("change", listener);
     return () => media.removeEventListener("change", listener);
   }, [matches, query]);
@@ -23,21 +22,28 @@ const useMediaQuery = (query) => {
 
 const Header = ({ isAuth}) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isProgramsOpen, setProgramsOpen] = useState(false);
+  const [isInstituteOpen, setInstituteOpen] = useState(false);
+
 
   const isDesktop = useMediaQuery('(min-width: 951px)');
   
  
-  const dropdownRef = useRef(null);
+  const programsRef = useRef(null);
+  const instituteRef = useRef(null);
 
 
   useEffect(() => {
 
-    if (!isDropdownOpen || !isDesktop) return;
+    if (!isProgramsOpen && !isInstituteOpen || !isDesktop) return;
 
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
+      if (
+        (programsRef.current && !programsRef.current.contains(event.target)) &&
+        (instituteRef.current && !instituteRef.current.contains(event.target))
+      ) {
+        setProgramsOpen(false);
+        setInstituteOpen(false);
       }
     };
 
@@ -47,7 +53,7 @@ const Header = ({ isAuth}) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isDropdownOpen, isDesktop]);
+  }, [isProgramsOpen,isInstituteOpen,isDesktop]);
 
 
   useEffect(() => {
@@ -61,12 +67,14 @@ const Header = ({ isAuth}) => {
 
   const closeMenus = () => {
     setMenuOpen(false);
-    setDropdownOpen(false);
+    setProgramsOpen(false);
+    setInstituteOpen(false);
   };
   
   useEffect(() => {
     if (!menuOpen) {
-      setDropdownOpen(false);
+      setProgramsOpen(false);
+      setInstituteOpen(false);
     }
   }, [menuOpen]);
 
@@ -93,12 +101,15 @@ const Header = ({ isAuth}) => {
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
         <Link to={"/"} onClick={closeMenus}>Home</Link>
         
-        <div className="dropdown" ref={dropdownRef}>
+        <div className="dropdown" ref={programsRef}>
           <button 
-            className={`dropdown-toggle ${isDropdownOpen ? "active" : ""}`}
-            onClick={() => setDropdownOpen(!isDropdownOpen)}
+            className={`dropdown-toggle ${isProgramsOpen ? "active" : ""}`}
+            onClick={() => {
+              setProgramsOpen(!isProgramsOpen);
+              setInstituteOpen(false);
+            }}
             aria-haspopup="true"
-            aria-expanded={isDropdownOpen}
+            aria-expanded={isProgramsOpen}
           >
             All Programs
             <svg className="caret-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -106,7 +117,7 @@ const Header = ({ isAuth}) => {
             </svg>
           </button>
           
-          <div className={`dropdown-menu megamenu ${isDropdownOpen ? "open" : ""}`}>
+          <div className={`dropdown-menu megamenu ${isProgramsOpen ? "open" : ""}`}>
             <div className="mega-sub">
               <ul>
                 <li><Link to="/engineering" onClick={closeMenus}>Engineering</Link></li>
@@ -118,6 +129,32 @@ const Header = ({ isAuth}) => {
                 <li><Link to="/communication" onClick={closeMenus}>Communication & Multimedia</Link></li>
                 <li><Link to="/humanities" onClick={closeMenus}>Humanities & Social Science</Link></li>
                 <li><Link to="/computational" onClick={closeMenus}>Computational & Applied Science</Link></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="dropdown" ref={instituteRef}>
+          <button 
+            className={`dropdown-toggle ${isInstituteOpen ? "active" : ""}`}
+            onClick={() => {
+              setInstituteOpen(!isInstituteOpen);
+              setProgramsOpen(false);
+            }}
+            aria-haspopup="true"
+            aria-expanded={isInstituteOpen}
+          >
+            All Institute
+            <svg className="caret-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+            </svg>
+          </button>
+          
+          <div className={`dropdown-menu megamenu ${isInstituteOpen ? "open" : ""}`}>
+            <div className="mega-sub">
+              <ul>
+                <li><Link to="/alokbharati" onClick={closeMenus}>Alokbharati Institute</Link></li>
+                <li><Link to="#" onClick={closeMenus}>Debdaan Parna Griha Institute</Link></li>
               </ul>
             </div>
           </div>

@@ -4,8 +4,6 @@ import {
   AiFillFacebook,
   AiFillYoutube,
   AiFillInstagram,
-  AiFillContacts,
-  AiFillMobile,
 } from "react-icons/ai";
 
 

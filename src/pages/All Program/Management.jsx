@@ -79,7 +79,7 @@ const Management = () => {
                 <li>Finance</li>
                 <li>HR</li>
                 <li>Data Science</li>
-                <li>Agri Business & Rural Management</li>
+                {/* <li>Agri Business & Rural Management</li> */}
               </ul>
             </div>
             <div className="programme-card">
@@ -105,10 +105,10 @@ const Management = () => {
                 <h4>Hotel & Hospitality Management</h4>
               </div>
               <ul>
-                <li>Hotel Management</li>
-                <li>Hospitality Management</li>
+                <li>Hotel Management & Hospitality Administration</li>
+                {/* <li>Hospitality Management</li> */}
                 <li>Event Management</li>
-                <li>Travel & Tourism Management</li>
+                <li>Travel & Tourism Administration</li>
               </ul>
             </div>
 

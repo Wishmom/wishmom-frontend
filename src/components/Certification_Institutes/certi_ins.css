@@ -1,6 +1,6 @@
 .featured-section {
   padding: 80px 10%;
-  background-color: #fff;
+  background-color: #cffc90;
 }
 
 .featured-section h2 {
@@ -12,13 +12,13 @@
 
 .institute-card {
   display: flex;
-  border-left: 8px solid var(--rosewood);
+  border-left: 8px solid yellow;
   border-radius: 14px;
   margin-bottom: 30px;
   overflow: hidden;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(246, 251, 0, 0.95);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   transition: transform 0.3s ease;
@@ -51,9 +51,26 @@
   line-height: 1.6;
 }
 
+.card-content ul {
+  list-style-type: decimal;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.card-content li {
+  margin-bottom: 12px;
+  color: #34495e;
+}
+
+.card-content a {
+  font-size: 1rem;
+  left: 20px;
+}
+
+
 /* ISO Certification Section */
 .iso-section {
-  background-color: #fff;
+  background-color: #cffc90;
 }
 
 .iso-container {
@@ -78,13 +95,16 @@
   border-radius: 133px;
   /* border: 1px solid #ccc; */
 }
+.certificate-image{
+  height: 200px;
+}
 
 .certificate-details {
   flex: 1;
   overflow: hidden;
   box-shadow: 5px 8px 18px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
-  background-color: rgba(250, 246, 246, 0.9);
+  background-color: rgba(246, 251, 0, 0.95);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   transition: transform 0.3s ease;
@@ -95,7 +115,7 @@
 }
 
 .certificate-details h3 {
-  color: #004080;
+  color: rgb(4, 39, 4);
   margin-bottom: 10px;
 }
 

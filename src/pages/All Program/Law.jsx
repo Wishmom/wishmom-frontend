@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./all_program.css"
 import { FaBullseye, FaInfoCircle, FaRocket, FaGraduationCap, FaLaptopCode, FaCogs } from 'react-icons/fa';

@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./all_program.css"
 import { FaBullseye, FaInfoCircle, FaRocket, FaGraduationCap, FaLaptopCode, FaCogs } from 'react-icons/fa';
@@ -72,8 +71,8 @@ const Medical = () => {
                 <h4>Diploma Courses</h4>
               </div>
               <ul>
-                <li>Medical Laboratory</li>
-                <li>Pharmacy</li>
+                <li>Medical Laboratory Technology(DMLT)</li>
+                <li>Pharmacy(B. Pharma)</li>
               </ul>
             </div>
 
@@ -103,12 +102,12 @@ const Medical = () => {
                 <h4>Master's Degrees</h4>
               </div>
               <ul>
-                <li>Msc in Critical Care Technology</li>
-                <li>Msc in Operation Theatre Technology</li>
-                <li>Msc in Medical Radiology & Imaging Technology</li>
-                <li>Msc in Physician Assistant</li>
+                {/* <li>Msc in Critical Care Technology</li> */}
+                {/* <li>Msc in Operation Theatre Technology</li> */}
+                {/* <li>Msc in Medical Radiology & Imaging Technology</li> */}
+                {/* <li>Msc in Physician Assistant</li> */}
                 <li>Msc in Medical Laboratory Technology</li>
-                <li>Msc in Physiotherapy</li>
+                {/* <li>Msc in Physiotherapy</li> */}
                 <li>Msc in Optometry</li>
                 <li>Master of Pharmacy(Pharmaceutical Chemistry)</li>
                 <li>Master of Pharmacy(Pharmaceutics)</li>
