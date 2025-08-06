@@ -81,6 +81,7 @@
 }
 
 .auth-form input {
+    margin-top: 12px;
     width: calc(100% - 24px); /* Adjust for padding */
     padding: 14px 12px; /* More vertical padding for taller inputs */
     border: 1px solid #ddd; /* Light, subtle border */

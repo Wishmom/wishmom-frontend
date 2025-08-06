@@ -24,6 +24,7 @@ import Agriculture from "./pages/All Program/Agriculture";
 import Humanities from "./pages/All Program/Humanities";
 import Communication from "./pages/All Program/Communication";
 import AlokIns from "./pages/All Institute/Alok_ins";
+import Debdaan from "./pages/All Institute/Debdaan_ins";
 import Law from "./pages/All Program/Law"
 
 
@@ -52,6 +53,7 @@ const App = () => {
             <Route path="/communication" element={<Communication />} />
             <Route path="/contact_us" element={<Contact />} />
             <Route path="/alokbharati" element={<AlokIns />} />
+            <Route path="/debdaan" element={<Debdaan />} />
 
             <Route
               path="/account"

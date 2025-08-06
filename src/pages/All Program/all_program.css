@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
-  --primary-color: #88d66c;
-  --secondary-color: #73bba3;
-  --primary-gradient: linear-gradient(90deg, #b4e380 0%, #f6fb7a 100%);
-  --background-light: #cffc90;
+  --primary-color: #f6a800; /* sunset-yellow */
+  --secondary-color: #f97300; /* orange flame */
+  --primary-gradient: linear-gradient(90deg, #fff8e6 0%, #fff3c2 100%);
+  --background-light: #fff8e6; /* warm ivory */
   --background-white: #ffffff;
-  --text-dark: rgb(4, 39, 4);
-  --text-light: rgb(4, 74, 4);
-  --shadow-subtle: 0 4px 15px rgba(115, 187, 163, 0.08);
-  --shadow-strong: 0 8px 30px rgba(246, 251, 122, 0.2);
+  --text-dark: #3c1a1a;
+  --text-light: #4c0f29;
+  --shadow-subtle: 0 4px 15px rgba(255, 204, 102, 0.08);
+  --shadow-strong: 0 8px 30px rgba(255, 204, 102, 0.2);
 }
 
 .eng-page {
@@ -92,7 +92,7 @@
 
 .feature-icon {
   margin-right: 1rem;
-  color: rgb(4, 39, 4);
+  color: var( --text-light);
 }
 
 .feature-section.layout-reversed .feature-image-wrapper {
@@ -120,7 +120,7 @@
 }
 
 .programme-card {
-  background:  rgba(246, 251, 0, 0.95);
+  background: rgba(255, 243, 194, 0.95); /* glowing yellow ivory */
   border-radius: 12px;
   padding: 2.5rem 2rem;
   box-shadow: var(--shadow-subtle);
@@ -136,7 +136,7 @@
   left: 0;
   width: 100%;
   height: 6px;
-  background: var(--text-dark);
+  background: var(--text-light);
 }
 
 .programme-card:hover {
@@ -152,7 +152,7 @@
 
 .card-icon {
   font-size: 2rem;
-  color: var(--primary-color);
+  color: var();
   margin-right: 1rem;
 }
 
@@ -171,7 +171,7 @@
   padding-left: 1.5rem;
   position: relative;
   margin-bottom: 0.75rem;
-  color: rgb(1 34 1);
+  color: #3c1a1a;
 }
 
 .programme-card li::before {
@@ -230,7 +230,7 @@
 }
 
 .engineering {
-  background: linear-gradient(to bottom, #fff, #faffec);
+  background: linear-gradient(to bottom, #ffffff, #fffbe6);
 }
 
 .course-box,
@@ -241,7 +241,7 @@
 }
 
 .course-box {
-  box-shadow: 0 4px 12px rgba(115, 187, 163, 0.12);
+  box-shadow: 0 4px 12px rgba(255, 204, 102, 0.12);
 }
 
 .course-btn:hover {

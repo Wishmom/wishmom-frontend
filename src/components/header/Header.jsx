@@ -154,7 +154,7 @@ const Header = ({ isAuth}) => {
             <div className="mega-sub">
               <ul>
                 <li><Link to="/alokbharati" onClick={closeMenus}>Alokbharati Institute</Link></li>
-                <li><Link to="#" onClick={closeMenus}>Debdaan Parna Griha Institute</Link></li>
+                <li><Link to="/Debdaan" onClick={closeMenus}>Debdaan Parna Griha Institute</Link></li>
               </ul>
             </div>
           </div>

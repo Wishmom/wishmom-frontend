@@ -282,7 +282,7 @@ body {
   text-decoration: underline;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 830px) {
   .contact-container {
     padding: 4rem;
   }

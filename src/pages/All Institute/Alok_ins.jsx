@@ -1,13 +1,13 @@
 import React from "react";
-import "./alok_ins.css";
+import "./all_ins.css";
 import { AiFillFacebook } from "react-icons/ai";
 
 const AlokIns = () => {
   return (
-    <section className="featured-section">
-    <div className="institute-card">
-            <img src="/Image/alok.jpg" alt="Alokbharati" />
-            <div className="card-content">
+    <section className="featured-section1">
+    <div className="institute-card1">
+            <img src="/Image/alok-ins1.png" alt="Alokbharati" className="Alokbharati-logo" />
+            <div className="card-content1">
               <h3>Alokbharati Institute</h3>
               <p>
                 Programs in counseling, parenting, and mentorship—designed to
@@ -38,7 +38,7 @@ const AlokIns = () => {
                   Anatomy, Yoga, Meditation, Counseling, Parenting, etc.)
                 </li>
               </ul>
-              <a href="https://www.facebook.com/share/1GU8h9Uarn/">
+              <a href="https://www.facebook.com/share/1785BW8tko/">
                 <AiFillFacebook />
               </a>
             </div>

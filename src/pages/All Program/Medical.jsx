@@ -92,6 +92,7 @@ const Medical = () => {
                 <li>Bsc in Nursing</li>
                 <li>Bachelor of Pharmacy</li>
                 <li>Bsc(H) Food Nutrition & Dietetics</li>
+                <li>General Nursing and Midwifery</li>
 
               </ul>
             </div>
@@ -111,6 +112,7 @@ const Medical = () => {
                 <li>Msc in Optometry</li>
                 <li>Master of Pharmacy(Pharmaceutical Chemistry)</li>
                 <li>Master of Pharmacy(Pharmaceutics)</li>
+                <li>General Nursing and Midwifery</li>
               </ul>
             </div>
              <div className="programme-card">
@@ -119,9 +121,10 @@ const Medical = () => {
                 <h4>Phd</h4>
               </div>
               <ul>
-                <li>Phd in Critical Care Technology</li>
+                {/* <li>Phd in Critical Care Technology</li>
                 <li>Phd in Operation Theatre Technology</li>
-                <li>Phd in Medical Radiology & Imaging Technology</li>
+                <li>Phd in Medical Radiology & Imaging Technology</li> */}
+                <li>Phd in Pharmaceutical Science</li>
               </ul>
             </div>
           </div>

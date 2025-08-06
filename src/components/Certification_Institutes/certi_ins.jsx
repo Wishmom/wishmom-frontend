@@ -10,7 +10,7 @@ const Certi_ins = () => {
         <h2>Featured Institutes</h2>
         <div className="institute-grid">
           <div className="institute-card">
-            <img src="/Image/alok.jpg" alt="Alokbharati" />
+            <img src="/Image/alok-ins1.png" alt="Alokbharati" />
             <div className="card-content">
               <h3>Alokbharati Institute</h3>
               <p>
@@ -22,7 +22,7 @@ const Certi_ins = () => {
 
           <div className="institute-card">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz8f8x7rW71opEDwK8KeUheQ5JTPAWwTscoA&s"
+              src="/Image/Debdaan1.png"
               alt="Debdaan"
             />
             <div className="card-content">
@@ -43,7 +43,7 @@ const Certi_ins = () => {
 
           <div className="iso-box">
             <img
-              src="/Image/ISO.jpg"
+              src="/Image/iso1.jpg"
               alt="ISO Certified"
               className="iso-badge"
             />
