@@ -1,0 +1,149 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+.about {
+  flex: 1;
+  padding: 100px 20px;
+  background: linear-gradient(145deg, #a4ff98, #4de416);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.about-content h2 {
+  font-size: 42px;
+  color:rgb(4, 39, 4);;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-content p {
+  font-size: 18px;
+  color: rgb(4, 39, 4);;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.icon-box {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 25px;
+  width: 220px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.icon-box:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-8px);
+}
+
+.icon-box i {
+  font-size: 36px;
+  color: rgb(4, 39, 4);;
+  margin-bottom: 12px;
+}
+
+.icon-box h3 {
+  font-size: 20px;
+  color: rgb(4, 39, 4);;
+  margin-bottom: 10px;
+}
+
+.icon-box p {
+  font-size: 15px;
+  color: rgb(4, 39, 4);;
+  line-height: 1.5;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    padding: 20px;
+  }
+
+  .about-content h2 {
+    font-size: 32px;
+  }
+
+  .about-content p {
+    font-size: 16px;
+  }
+
+  .icon-box {
+    width: 100%;
+  }
+}
+.about-flex {
+  /* display: flex; */
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.chairman-photo {
+  flex: 1;
+  text-align: center;
+  min-width: 260px;
+}
+
+.chairman-photo img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.photo-caption {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.designation {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #023811;
+}

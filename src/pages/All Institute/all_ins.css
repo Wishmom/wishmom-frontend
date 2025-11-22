@@ -1,0 +1,144 @@
+
+
+:root {
+  --primary-color: #f6fb00;
+  --highlight-color: #ffbf00;
+  --accent-color: #34495e;
+  --title-color: #b30059;
+  --background-gradient: linear-gradient(to right, #dfffa5, #f9fbe7);
+  --hover-scale: 1.02;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.featured-section1 {
+  padding: 80px 10%;
+  background: var(--background-gradient);
+}
+
+.institute-card1 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-left: 10px solid var(--highlight-color);
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.institute-card1:hover {
+  transform: scale(var(--hover-scale));
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.institute-card1 img {
+  /* margin-top: 110px; */
+  /* width: 100%; */
+  max-width: fit-content;
+  object-fit: cover;
+  /* height: 27rem; */
+  height: fit-content;
+  /* border-right: 4px solid var(--highlight-color); */
+}
+
+.card-content1 {
+  flex: 1;
+  padding: 30px 40px;
+  background: white;
+  border-left: 4px solid var(--highlight-color);
+}
+
+.card-content1 h3 {
+  font-size: 28px;
+  color: var(--title-color);
+  margin-bottom: 16px;
+}
+
+.card-content1 p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.card-content1 ul {
+  padding-left: 22px;
+  line-height: 1.8;
+}
+
+.card-content1 li {
+  margin-bottom: 14px;
+  color: var(--accent-color);
+  font-size: 16px;
+}
+
+.card-content1 a {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 26px;
+  color: #3b5998;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.card-content1 a:hover {
+  color: #1d4ed8;
+  transform: scale(1.2);
+}
+
+.card-content1 svg {
+  margin-left: 2rem;
+  font-size: 42px;
+}
+
+@media (min-width: 950px) and (max-width: 1449px) {
+  .institute-card1 .Alokbharati-logo {
+    margin-top: 69px;
+  }
+}
+
+@media (max-width: 950px) {
+  .institute-card1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .featured-section1 {
+    padding: 80px 14%;
+    background: var(--background-gradient);
+  }
+
+  .card-content1 {
+    padding: 20px;
+    border-top: 4px solid var(--highlight-color);
+    border-left: none;
+  }
+
+  .institute-card1 img {
+    max-width: 66%;
+    width: fit-content;
+    border-right: none;
+    height: 288px;
+    margin-top: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .featured-section1 {
+    padding: 80px 7%;
+    background: var(--background-gradient);
+  }
+}
+
+@media (max-width: 390px) {
+  .institute-card1 img {
+    max-width: 66%;
+    width: fit-content;
+    border-right: none;
+    height: fit-content;
+    margin-top: none;
+  }
+}
+
