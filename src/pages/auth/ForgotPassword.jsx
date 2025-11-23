@@ -23,6 +23,20 @@ const ForgotPassword = () => {
       setBtnLoading(false);
     }
   }
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setBtnLoading(true);
+  //   try {
+  //     const { data } = await axios.post(`${server}/api/user/forgot`, { email });
+  //     toast.success(data.message);
+  //     navigate("/login");
+  //   } catch (error) {
+  //     console.error("Forgot password error:", error);
+  //     toast.error(error.response?.data?.message || "Failed to send email.");
+  //   } finally {
+  //     setBtnLoading(false); // Reset loading state
+  //   }
+  // };
   return (
     <div className="auth-page">
       <div className="auth-form">

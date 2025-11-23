@@ -173,13 +173,23 @@ const Header = ({ isAuth }) => {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/mbbs" onClick={closeMenus}>
+                    MBBS/MD
+                  </Link>
+                </li>
+                <li>
                   <Link to="/Loan" onClick={closeMenus}>
-                    Loan
+                    Wish-Mom Loans
                   </Link>
                 </li>
                 <li>
                   <Link to="/Job" onClick={closeMenus}>
                     Job Consultancy
+                  </Link>
+                </li>
+                 <li>
+                  <Link to="/startup" onClick={closeMenus}>
+                    STARTUPINDIA
                   </Link>
                 </li>
               </ul>
@@ -227,6 +237,7 @@ const Header = ({ isAuth }) => {
                     Debdaan Parna Griha Institute
                   </Link>
                 </li>
+               
               </ul>
             </div>
           </div>

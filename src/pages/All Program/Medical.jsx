@@ -127,20 +127,7 @@ const Medical = () => {
                 <li>Phd in Pharmaceutical Science</li>
               </ul>
             </div>
-            <div className="programme-card">
-              <div className="card-header">
-                <FaCogs className="card-icon" />
-                <h4>MBBS / MD</h4>
-              </div>
-              <ul>
-                {/* <li>Phd in Critical Care Technology</li>
-                <li>Phd in Operation Theatre Technology</li>
-                <li>Phd in Medical Radiology & Imaging Technology</li> */}
-                <li>In India & Abroad</li>
-                <li>In Premium Medical Colleges</li>
-                <li>At an Astonishing Low Fees</li>
-              </ul>
-            </div>
+            
             
           </div>
 </a>

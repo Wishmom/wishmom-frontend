@@ -28,6 +28,8 @@ import Debdaan from "./pages/All Institute/Debdaan_ins";
 import Law from "./pages/All Program/Law"
 import Loan from "./pages/All Program/Loan"
 import Job from "./pages/All Program/Job"
+import MBBS from "./pages/All Program/mbbs"
+import Startup from "./pages/All Program/startup"
 
 
 
@@ -58,6 +60,8 @@ const App = () => {
             <Route path="/contact_us" element={<Contact />} />
             <Route path="/alokbharati" element={<AlokIns />} />
             <Route path="/debdaan" element={<Debdaan />} />
+            <Route path="/mbbs" element={<MBBS/>} />
+            <Route path="/startup" element={<Startup/>} />
 
             <Route
               path="/account"

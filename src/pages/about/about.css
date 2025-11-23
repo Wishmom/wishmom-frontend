@@ -1,26 +1,40 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 
+/* 🌅 Color Theme Variables */
+:root {
+  --primary-color: #f6a800; /* sunset-yellow */
+  --secondary-color: #f97300; /* orange flame */
+  --primary-gradient: linear-gradient(90deg, #fff8e6 0%, #fff3c2 100%);
+  --background-light: #fff8e6; /* warm ivory */
+  --background-white: #ffffff;
+  --text-dark: #3c1a1a;
+  --text-light: #4c0f29;
+  --shadow-subtle: 0 4px 15px rgba(255, 204, 102, 0.08);
+  --shadow-strong: 0 8px 30px rgba(255, 204, 102, 0.2);
+}
+
+/* ✨ About Section */
 .about {
   flex: 1;
   padding: 100px 20px;
-  background: linear-gradient(145deg, #a4ff98, #4de416);
+  background: var(--primary-gradient);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: var(--text-dark);
   font-family: 'Inter', sans-serif;
 }
 
+/* 🧊 About Content Card */
 .about-content {
   max-width: 900px;
   margin: 0 auto;
   padding: 40px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 204, 102, 0.3);
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-strong);
   backdrop-filter: blur(12px);
   text-align: center;
   animation: fadeInUp 1s ease-in-out;
@@ -28,18 +42,19 @@
 
 .about-content h2 {
   font-size: 42px;
-  color:rgb(4, 39, 4);;
+  color: var(--secondary-color);
   margin-bottom: 20px;
   font-weight: 700;
 }
 
 .about-content p {
   font-size: 18px;
-  color: rgb(4, 39, 4);;
+  color: var(--text-dark);
   line-height: 1.8;
   margin-bottom: 20px;
 }
 
+/* 🔆 Icon Section */
 .about-icons {
   display: flex;
   justify-content: center;
@@ -49,37 +64,40 @@
 }
 
 .icon-box {
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: var(--background-white);
   border-radius: 16px;
   padding: 25px;
   width: 220px;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid rgba(249, 115, 0, 0.1);
 }
 
 .icon-box:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: var(--background-light);
   transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
 }
 
 .icon-box i {
   font-size: 36px;
-  color: rgb(4, 39, 4);;
+  color: var(--secondary-color);
   margin-bottom: 12px;
 }
 
 .icon-box h3 {
   font-size: 20px;
-  color: rgb(4, 39, 4);;
+  color: var(--text-dark);
   margin-bottom: 10px;
 }
 
 .icon-box p {
   font-size: 15px;
-  color: rgb(4, 39, 4);;
+  color: var(--text-light);
   line-height: 1.5;
 }
 
+/* 🌄 Animations */
 @keyframes fadeInUp {
   0% {
     transform: translateY(30px);
@@ -91,6 +109,7 @@
   }
 }
 
+/* 📱 Responsive */
 @media (max-width: 768px) {
   .about-content {
     padding: 20px;
@@ -108,8 +127,9 @@
     width: 100%;
   }
 }
+
+/* 👨‍💼 Chairman Section */
 .about-flex {
-  /* display: flex; */
   flex-direction: row;
   gap: 2rem;
   flex-wrap: wrap;
@@ -120,6 +140,7 @@
 .about-text {
   flex: 1;
   min-width: 260px;
+  color: var(--text-dark);
 }
 
 .chairman-photo {
@@ -133,17 +154,18 @@
   max-width: 240px;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-subtle);
+  border: 2px solid var(--secondary-color);
 }
 
 .photo-caption {
   margin-top: 0.5rem;
   font-weight: 500;
-  color: #444;
+  color: var(--text-light);
 }
 
 .designation {
   font-style: italic;
   font-size: 0.9rem;
-  color: #023811;
+  color: var(--secondary-color);
 }

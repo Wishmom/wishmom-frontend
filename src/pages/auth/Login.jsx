@@ -24,7 +24,7 @@ const Login = () => {
                 </label>
 
                 <label htmlFor="password">Password
-                    <input type="password" value={password}  onChange={(e)=>setPassword(e.target.value)}  required />
+                    <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}  required />
                 </label>
 
                 <button disabled={btnLoading} type='submit' className='common-btn'>{btnLoading ? "Please wait..." : "Login"}</button>

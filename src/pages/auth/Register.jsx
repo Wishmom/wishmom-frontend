@@ -28,8 +28,7 @@ const Register = () => {
                 </label>
 
                 <label htmlFor="password">Password
-                    <input type="password" value={password} 
-                    onChange={(e)=>setPassword(e.target.value) } required />
+                    <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} required />
                 </label>
 
                 <button type="submit" disabled={btnLoading} className='common-btn'> { btnLoading? "Please Wait.....":"Register"}</button>
